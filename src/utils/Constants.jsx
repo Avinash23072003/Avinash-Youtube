@@ -4,3 +4,4 @@ export const YOUTUBE_API =
   API_KEY;
 export const YOUTUBE_SEARCH_KEY =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+export const LIVE_COUNT = 25;

@@ -1,5 +1,5 @@
 const videoCards = ({ info }) => {
-  console.log(info);
+  if (!info) return;
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
 
