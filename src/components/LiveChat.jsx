@@ -12,13 +12,13 @@ const LiveChat = ({ name, message }) => {
     //fetch API
     const i = setInterval(() => {
       // console.log("Hello Avinas");
-    //   dispatch(
-    //     chatMessage({
-    //       name: randomNameGenerator(),
-    //       message: getRandomMessage(),
-    //     })
-    //   );
-    // }, 1000);
+      dispatch(
+        chatMessage({
+          name: randomNameGenerator(),
+          message: getRandomMessage(),
+        })
+      );
+    }, 55500);
 
     return () => {
       clearInterval(i);
