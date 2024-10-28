@@ -1,18 +1,30 @@
+import { value_converter } from "../utils/Constants";
+import moment from "moment";
+
 const videoCards = ({ info }) => {
   if (!info) return;
   const { snippet, statistics } = info;
   const { channelTitle, title, thumbnails } = snippet;
 
   return (
-    <div className="p-2 m-4 w-50 shadow-xl ">
-      <img className="rounded-2xl rounded-t-lg" src={thumbnails.medium.url} />
-      <ul>
-        <li className="font-bold w-72">{title}</li>
-        <li>{channelTitle}</li>
-        <li>{snippet.publishedAt}</li>
-        <li>{statistics.viewCount} view</li>
-      </ul>
+    <div className="flex overflow-x-auto space-x-4 p-4">
+      <div className="w-64 h-80 shadow-xl bg-white rounded-2xl flex-shrink-0 flex flex-col">
+        <img
+          className="h-40 w-full object-cover rounded-t-2xl"
+          src={thumbnails.medium.url}
+          alt={title}
+        />
+        <ul className="flex-grow p-2">
+          <li>{title}</li>
+          <li>{channelTitle}</li>
+          <li>{moment(snippet.publishedAt).fromNow()}</li>
+          <li className="text-sm text-black-400 font-bold">
+            {value_converter(statistics.viewCount)} views
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
+
 export default videoCards;

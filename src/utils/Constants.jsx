@@ -5,3 +5,10 @@ export const YOUTUBE_API =
 export const YOUTUBE_SEARCH_KEY =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
 export const LIVE_COUNT = 25;
+export const value_converter = (number) => {
+  if (number >= 1000000) {
+    return (number / 1000000).toFixed(1) + "M";
+  } else if (number >= 1000) {
+    return (number / 1000).toFixed(1) + "K";
+  }
+};
