@@ -8,7 +8,7 @@ const videoCards = ({ info }) => {
 
   return (
     <div className="flex overflow-x-auto space-x-4 p-4">
-      <div className="w-64 h-80 shadow-xl bg-white rounded-2xl flex-shrink-0 flex flex-col">
+      <div className="w-64 h-80 shadow-xl rounded-2xl flex-shrink-0 flex flex-col">
         <img
           className="h-40 w-full object-cover rounded-t-2xl"
           src={thumbnails.medium.url}
